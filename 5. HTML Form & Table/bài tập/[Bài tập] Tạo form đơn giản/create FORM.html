@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CREATE FORM SIMPLE</title>
+</head>
+<body>
+<form >
+        <table class="border" >
+            <tr style="background-color: orangered">
+                <th colspan="2" > <H1 style="color:white" > SỞ THÍCH CỦA BẠN</H1> </th>
+            </tr>
+            <tr style="width: 20px">
+                <td> <p style="color: blue" class="right"><strong>Họ Và Tên :</strong> </p>   </td>
+                <td > <input type="text" name="yourname" id="yourname"/> </td>
+            </tr>
+            <tr>
+                <td> <p class="right" style="color: blue"> <strong> Email </strong>:</p>   </td>
+                <td> <input type="text" name="email" id="email"/> </td>
+            </tr>
+            <tr>
+                <td class="top"> <p class="right" style="color: blue"> <strong>Sở thích: </strong>  </p> </td>
+                <td>
+                    <table style="font-family: sans-serif">
+                        <tr style="color: orangered", stuy>
+                            <td> <p> <strong> <input type="checkbox" name="hobby" value="bóng đá" /> Bóng đá</strong>  </p>  </td>
+                            <td> <p> <strong> <input type="checkbox" name="hobby" value="chơi gamé" /> Chơi game  </strong></p></td>
+                            <td> <p> <strong> <input type="checkbox" name="hobby" value="cầu lông" /> Cầu lông  </strong></p></td>
+                        </tr>
+                        <tr style="color: orangered">
+                            <td> <p> <strong> <input type="checkbox" name="hobby" value="Du lịch" /> Du lịch </strong></p></td>
+                            <td> <p> <strong> <input type="checkbox" name="hobby" value="Ngủ" /> Ngủ </strong></p></td>
+                            <td> <p> <strong> <input type="checkbox" name="hobby" value="đọc sách" /> Đọc sách </strong></p></td>
+                        </tr>
+                        <tr style="color: orangered">
+                            <td> <p> <strong> <input type="checkbox" name="hobby" value="ca hát" /> Ca hát </strong></p></td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="center">
+                   <input class="checkbox" type="submit" name="guithongtin" value="Gửi thông tin"/>
+                    <input class="checkbox" type="reset"  value="Nhập lại">
+                </td>
+            </tr>
+
+        </table>
+</form>
+
+</body>
+<style>
+    p.right {
+        text-align: right;
+    }
+    td.top {
+        vertical-align: top;
+    }
+    td.center {
+        text-align: center;
+    }
+    table.border {
+        border: 10px solid cornflowerblue;
+    }
+    p {
+        font-family: Tahoma;
+        font-size: 20px;
+
+    }
+    input.checkbox {
+        background-color: darkgrey;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+
+</style>
+
+</html>
