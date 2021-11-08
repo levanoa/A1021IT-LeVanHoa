@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19558687-5a1b-46b6-9955-fbff5db9363e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../6. Tổng quan JavaScript/bài tập/chan+le.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. Tổng quan JavaScript/bài tập/output_1000_lan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. Tổng quan JavaScript/bài tập/tong_2so.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../[Bài tập] Tạo form đơn giản/TAO FORM.html" beforeDir="false" afterPath="$PROJECT_DIR$/../[Bài tập] Tạo form đơn giản/TAO FORM.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../test.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636303700235</updated>
-      <workItem from="1636303703186" duration="9674000" />
+      <workItem from="1636303703186" duration="15027000" />
     </task>
     <servers />
   </component>

@@ -6,7 +6,7 @@
 </head>
 <body>
     <form>
-        <table style="background-color: lightgoldenrodyellow" width="500px">
+        <table style="background-color: darkgrey" width="500px">
          <tr CLASS="DK"> <th colspan="2"> <H2>ĐĂNG KÝ HỌC VIÊN </H2> </th></tr>
             <tr>
                 <td> <P> HỌ VÀ TÊN </P> </td>
@@ -31,13 +31,12 @@
                 <td><p> LỚP</p></td>
                 <td>
                     <select name="class">
-                     <!--   <option value="-"> - CHỌN LỚP - </option>
+                       <option value="-"> - CHỌN LỚP - </option>
                         <option value="A"> LỚP A</option>
                         <option value="B"> LỚP B</option>
                         <option value="C"> LỚP C</option>
                         <option value="D"> LỚP D</option>
                     </select>
-                    -->
                 </td>
             </tr>
             <tr>
@@ -48,7 +47,7 @@
                 <td> <p>ĐIỆN THOẠI</p></td>
                 <td> <input type="text" name="phone">  </td>
             </tr>
-            <tr>
+            <tr >
                 <td colspan="2" STYLE="text-align: center">
                     <input class="checkbox" type="submit" name="submit" value=" ĐĂNG KÝ" >
                     <input  class="checkbox" type="reset" name="reset" value=" NHẬP LẠI" >
@@ -64,15 +63,19 @@
     p {
         text-align: left;
         font-weight: bold;
-        color: blue;
+        color: black;
     }
     tr.DK {
         text-align: center;
-        background-color: deepskyblue;
-        color: blue;
+        background-color: black;
+        color: white;
     }
     input.checkbox {
         font-weight: bold;
+    }
+    table {
+        width: 40%;
+
     }
 </style>
 </html>
