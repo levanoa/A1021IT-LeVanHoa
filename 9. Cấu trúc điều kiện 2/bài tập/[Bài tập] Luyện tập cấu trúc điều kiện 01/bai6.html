@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IF ELSE</title>
+</head>
+ <style>
+     <style>
+     input {
+
+         width: 50px;
+         height: 30px;
+         background-color: gray;
+         text-align: center;
+         color: white;
+         margin-right: 10px;
+         margin-left: 10px;
+     }
+     button {
+         background-color: black;
+         border-radius: 15px;
+         color: white;
+         padding: 10px 10px;
+
+         text-align: center;
+         display: inline-block;
+         font-size: 16px;
+
+
+     }
+     button:hover {
+         color: greenyellow;
+     }
+
+
+
+     </style>
+ </style>
+
+<body>
+        <form>
+            <h1> LƯƠNG CƠ BẢN + HOA HỒNG</h1>
+            LƯƠNG CƠ BẢN: <input type="text" id="a" />
+             DOANH THU : <input type="text" id="b" />
+            <br>
+            <br>
+            <button type="button" onclick="check()">KIỂM TRA </button>
+            <br> <br>
+            <span> <i>Hoa hồng: </i>  </span>
+            <span id="kq" > </span>
+            <br> <br>
+            <span><i>Tổng lương: </i>  </span>
+            <span id="luong" > </span>
+        </form>
+        <script>
+            function check() {
+                var a = document.getElementById("a").value;
+                a = parseInt(a);
+                var b = document.getElementById("b").value;
+                b = parseFloat(b);
+                var hoahong;
+                hoahong = parseFloat(hoahong);
+                var luong;
+                if ( b >= 100000000) {
+                     hoahong = b * 0.12 ;
+                } else if (b >= 70000000) {
+                    hoahong = b * 0.08;
+                } else if (b>= 50000000) {
+                    hoahong = b * 0.05 ;
+                } else if (b >= 30000000) {
+                    hoahong = b * 0.03;
+                } else {
+                    hoahong = 0 ;
+                }
+                document.getElementById("kq").innerHTML=hoahong;
+                luong = a + hoahong;
+                document.getElementById("luong").innerHTML=luong;
+
+            }
+
+
+
+        </script>
+
+
+</body>
+
+</html>

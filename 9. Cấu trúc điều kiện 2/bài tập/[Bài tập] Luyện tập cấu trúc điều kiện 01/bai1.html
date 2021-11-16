@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TIEN TE</title>
+</head>
+<body>
+
+<form >
+    <span>
+         A: <input type="text" id="a" />
+         B: <input type="text" id="b" />
+    </span>
+
+
+    <button type="button" onclick="check()"> KIỂM TRA</button>
+    <br> <br>
+    Result: <span id="kq"></span>
+</form>
+
+<script>
+    function check(){
+        var a = document.getElementById("a").value;
+        a = parseInt(a);
+        var b = document.getElementById("b").value;
+        b = parseInt(b);
+        if( a % b == 0) {
+            document.getElementById("kq").innerText= " a chia hết cho b";
+        } else {
+            document.getElementById("kq").innerText= " a không chia hết cho b";
+
+        }
+
+
+    }
+
+</script>
+</body>
+
+</html>

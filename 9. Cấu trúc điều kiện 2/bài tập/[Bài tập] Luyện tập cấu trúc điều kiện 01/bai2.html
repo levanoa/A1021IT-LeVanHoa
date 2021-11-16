@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> IF ELSE</title>
+</head>
+<style>
+
+</style>
+<body>
+
+<form style="text-align: center" >
+
+   <p> MỜI BẠN NHẬP SỐ TUỔI: <input type="text" id="a" /></p>
+
+    <button type="button" onclick="check()"> KIỂM TRA</button>
+    <br> <br>
+     <span id="kq"></span>
+</form>
+
+<script>
+    function check(){
+        var a = document.getElementById("a").value;
+        a = parseInt(a);
+        if( a >= 15) {
+            document.getElementById("kq").innerText= " Đủ điều kiện vào lớp 10";
+        } else {
+            document.getElementById("kq").innerText= " Không đủ điều kiện vào lớp 10";
+
+        }
+
+
+    }
+
+</script>
+</body>
+
+</html>
