@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TIEN TE</title>
+</head>
+<body>
+
+<form >
+    <input type="text" id="a" />
+
+    <button type="button" onclick="month()"> TÍNH SỐ NGÀY TRONG NĂM</button>
+    <br> <br>
+    Result: <span id="kq"></span>
+</form>
+
+<script>
+    function month(){
+        var a = document.getElementById("a").value;
+        a = parseInt(a);
+
+        switch (a) {
+            case 1: case 3 : case 5 : case 7 : case 8: case 10: case 12 :
+                document.getElementById("kq").innerText = " Tháng " + a + " có 31 ngày";
+                break;
+            case 4: case 6 : case 9 : case 11:
+                document.getElementById("kq").innerText = " Tháng " + a + " có 30 ngày";
+                break;
+            case 2:
+                document.getElementById("kq").innerText = " Tháng " + a + " có 28 ngày";
+                break;
+            default:
+                document.getElementById("kq").innerText = " Vui lòng nhập lại ";
+
+        }
+
+    }
+
+</script>
+</body>
+
+</html>
