@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IF ELSE</title>
+</head>
+<body >
+
+<form style="text-align: center">
+    <h1> GIẢI PHƯƠNG TRÌNH BẬT 2 </h1>
+    Nhập a :  <input type="text" id="a" >  nhập b:  <input type="text" id="b" />  nhập c:<input type="text" id="c" />
+
+    <br> <br>
+    <button type="button" onclick="convert()"> TÍNH  </button> <br> <br>
+    <span id="kq0"></span> <br> <br>
+     <span id="kq1"></span> <br>
+     <span id="kq2"></span>
+
+</form>
+<script>
+    function convert() {
+        var a = document.getElementById('a').value;
+        a = parseFloat(a);
+        var b = document.getElementById('b').value;
+        b = parseFloat(b);
+        var c = document.getElementById('c').value;
+        c = parseFloat(c);
+        var x1 = parseFloat(x1);
+        var x2 = parseFloat(x2);
+        var delta = parseFloat(delta);
+        delta = b*b - 4*a*c;
+           if (a != 0) {
+               if (delta < 0) {
+                   document.getElementById("kq0").innerText = " PHƯƠNG TRÌNH VÔ NGHIỆM";
+
+               } else if (delta == 0) {
+                   x2=x1 = -b/(2*a);
+                   document.getElementById("kq0").innerText = " PHƯƠNG TRÌNH ĐÃ CHO CÓ NGHIỆM KÉP";
+                   document.getElementById("kq1").innerText = "x1 :" + x1;
+                   document.getElementById("kq1").innerText = "x2 :" + x2;
+
+               } else {
+                   document.getElementById("kq0").innerText = " PHƯƠNG TRÌNH ĐÃ CHO CÓ 2 NGHIỆM";
+                   x1 =  ( - b + Math.sqrt(delta)) / (2 * a);
+                   x2 =  ( - b - Math.sqrt(delta)) / (2 * a);
+                   document.getElementById("kq1").innerText = "x1 :" + x1;
+                   document.getElementById("kq2").innerText = "x2 :" + x2;
+               }
+           } else {
+               document.getElementById("kq0").innerText = " MỜI BẠN NHẬP LẠI";
+           }
+
+
+
+
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IF ELSE</title>
+</head>
+<body style="text-align: center">
+       <form>
+           <h1> TÍNH LƯƠNG NHÂN VIÊN</h1>
+           LƯƠNG CƠ BẢN: <input type="text" id="a" />
+           <button type="button" onclick="check()"> TÍNH LƯƠNG </button> <br> <br>
+           THUẾ THU NHẬP  : <span id="kq_a" ></span> <br> <br>
+           LƯƠNG THỰC NHẬN: <span id="kq_b" ></span>
+
+       </form>
+        <script>
+            function check() {
+                var a= document.getElementById("a").value;
+                a = parseFloat(a);
+                var b ;
+                b = parseFloat(b);
+                var c;
+                c =parseFloat(c);
+                if ( a >= 15000000){
+                    c = a * 0.2;
+                    b = a - c;
+                } else if ( a >= 7000000) {
+                    c = a * 0.1;
+                    b = a - c;
+                } else {
+                    c =  a * 0.05;
+                    b = a - c;
+                }
+                document.getElementById("kq_a").innerHTML=c;
+
+                document.getElementById("kq_b").innerHTML=b;
+            }
+
+
+
+        </script>
+
+
+
+</body>
+
+</html>

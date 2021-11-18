@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IF ELSE</title>
+</head>
+<body style="text-align: center">
+
+     <form>
+         <h1> TÍNH DIỆN TÍCH HÌNH VUÔNG </h1>
+        Độ dài cạnh a:  <input type="text" id="a" >
+         <br> <br>
+         <button type="button" onclick="convert()"> TÍNH  </button> <br> <br>
+         Diện tích là: <span id="kq"></span>
+
+     </form>
+    <script>
+        function convert() {
+            var a = document.getElementById('a').value;
+            a = parseInt(a)
+            var s = parseInt(s);
+            s = a*a;
+            document.getElementById("kq").innerHTML=s;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

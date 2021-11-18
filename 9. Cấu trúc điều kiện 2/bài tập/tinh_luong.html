@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IF ELSE</title>
+</head>
+<body style="text-align: center">
+<p> <i>Cuộc gọi < 1 phút: giá cước 300đ <br>
+ từ 1p đến 3p giá cước: 500đ <br>
+    từ 3p trở lên giá cước 1300d * </i> </p>
+       <form>
+           <h1> TÍNH CƯỚC PHÚT GỌI </h1>
+           <input type="text" id="a">
+           <button type="button" onclick="check()"> KIỂM TRA</button>
+           <br>
+           <br>
+           SỐ TIỀN TRẢ: <span id="kq" > </span>
+
+       </form>
+
+        <script>
+            function check() {
+                let a = document.getElementById("a").value;
+                a = parseInt(a);
+                var cuoc = parseInt(cuoc);
+                if (a >=3) {
+                    cuoc = a * 1300;
+
+                } else if(a>=1) {
+                   cuoc = a * 500;
+
+                } else {
+                    cuoc = a * 300;
+                }
+                document.getElementById("kq").innerHTML=cuoc;
+
+
+            }
+
+        </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IF ELSE</title>
+</head>
+<body style="text-align: center" >
+
+    <form>
+        <h1> KIỂM CẠNH CỦA MỘT TAM GIÁCC</h1>
+        <strong>CẠNH A</strong> <input type="text" id="a"> <br> <br>
+        <strong>CẠNH B</strong> <input type="text" id="b"> <br> <br>
+        <strong>CẠNH C</strong> <input type="text" id="c"> <br> <br>
+        <button type="button" onclick="check()"> KIỂM TRA</button> <br> <br>
+        <strong>KẾT QUẢ: </strong> <span id="kq"></span>
+    </form>
+    <script>
+        function check() {
+            var a = document.getElementById('a').value;
+            a = parseInt(a);
+            var b = document.getElementById('b').value;
+            b = parseInt(b);
+            var c = document.getElementById('c').value;
+            c = parseInt(c);
+            if((a<b+c) && (b<a+c) && (c<b+a)){
+                document.getElementById('kq').innerText = " 3 số nhập vào là cạnh của một tam giác";
+            }else {
+                document.getElementById('kq').innerText = " không phải là cạnh của một tam giác";
+
+            }
+        }
+
+
+</script>
+
+
+</body>
+
+</html>
