@@ -5,39 +5,41 @@
     <title>IF ELSE</title>
 </head>
 <body style="text-align: center">
-<p> <i>Cuộc gọi < 1 phút: giá cước 300đ <br>
- từ 1p đến 3p giá cước: 500đ <br>
-    từ 3p trở lên giá cước 1300d * </i> </p>
        <form>
-           <h1> TÍNH CƯỚC PHÚT GỌI </h1>
-           <input type="text" id="a">
-           <button type="button" onclick="check()"> KIỂM TRA</button>
-           <br>
-           <br>
-           SỐ TIỀN TRẢ: <span id="kq" > </span>
+           <h1> TÍNH LƯƠNG NHÂN VIÊN</h1>
+           LƯƠNG CƠ BẢN: <input type="text" id="a" />
+           <button type="button" onclick="check()"> TÍNH LƯƠNG </button> <br> <br>
+           THUẾ THU NHẬP  : <span id="kq_a" ></span> <br> <br>
+           LƯƠNG THỰC NHẬN: <span id="kq_b" ></span>
 
        </form>
-
         <script>
             function check() {
-                let a = document.getElementById("a").value;
-                a = parseInt(a);
-                var cuoc = parseInt(cuoc);
-                if (a >=3) {
-                    cuoc = a * 1300;
-
-                } else if(a>=1) {
-                   cuoc = a * 500;
-
+                var a= document.getElementById("a").value;
+                a = parseFloat(a);
+                var b ;
+                b = parseFloat(b);
+                var c;
+                c =parseFloat(c);
+                if ( a >= 15000000){
+                    c = a * 0.2;
+                    b = a - c;
+                } else if ( a >= 7000000) {
+                    c = a * 0.1;
+                    b = a - c;
                 } else {
-                    cuoc = a * 300;
+                    c =  a * 0.05;
+                    b = a - c;
                 }
-                document.getElementById("kq").innerHTML=cuoc;
+                document.getElementById("kq_a").innerHTML=c;
 
-
+                document.getElementById("kq_b").innerHTML=b;
             }
 
+
+
         </script>
+
 
 
 </body>

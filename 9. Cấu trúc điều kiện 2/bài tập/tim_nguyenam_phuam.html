@@ -5,35 +5,33 @@
     <title>IF ELSE</title>
 </head>
 <body style="text-align: center">
+<i> Viết chương trình kiểm tra một ký tự trong bảng chữ cái tiếng anh là nguyên âm hay phụ âm. <br>
+Ký tự là bất kỳ được nhập từ bàn phím. Các ký tự nguyên âm bao gồm: 'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E' </i>
        <form>
-           <h1> TÍNH LƯƠNG NHÂN VIÊN</h1>
-           LƯƠNG CƠ BẢN: <input type="text" id="a" />
-           <button type="button" onclick="check()"> TÍNH LƯƠNG </button> <br> <br>
-           THUẾ THU NHẬP  : <span id="kq_a" ></span> <br> <br>
-           LƯƠNG THỰC NHẬN: <span id="kq_b" ></span>
+           <h1> TÌM NGUYÊN ÂM TRONG TIẾNG ANH</h1>
+           NHẬP KÝ TỰ: <input type="text" id="a" />
+           <button type="button" onclick="check()"> KIỂM TRA </button> <br> <br>
+          KẾT QUẢ : <span style="color: red" id="kq" ></span> <br> <br>
+
 
        </form>
         <script>
             function check() {
-                var a= document.getElementById("a").value;
-                a = parseFloat(a);
-                var b ;
-                b = parseFloat(b);
-                var c;
-                c =parseFloat(c);
-                if ( a >= 15000000){
-                    c = a * 0.2;
-                    b = a - c;
-                } else if ( a >= 7000000) {
-                    c = a * 0.1;
-                    b = a - c;
-                } else {
-                    c =  a * 0.05;
-                    b = a - c;
-                }
-                document.getElementById("kq_a").innerHTML=c;
+                var ok= document.getElementById("a").value;
 
-                document.getElementById("kq_b").innerHTML=b;
+                switch (ok) {
+
+                    case "o" : case "u": case "i": case "a": case "e":
+                        document.getElementById("kq").innerText= ok + " là nguyên âm";
+                        break;
+                    case "O" : case "U": case "I": case "A": case "E":
+                        document.getElementById("kq").innerText= ok + " là nguyên âm";
+                        break;
+                    default:
+                         document.getElementById("kq").innerText= ok + " là phụ âm";
+
+                }
+
             }
 
 
