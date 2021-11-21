@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VONG LAP LONG NHAU</title>
+</head>
+<body style="text-align: center" >
+  <form>
+      <button type="button" onclick="play()" > CHƠI</button>
+
+  </form>
+<script >
+       function play() {
+           var a = parseInt(prompt("mời bạn nhâp khoảng cần đoán", ''));
+           for ( let i = 0 ; i <a ; i++) {
+              var b = parseInt(prompt("mời bạn nhập giá trị đoán", ''));
+               if ( i == b ) {
+                   document.write("bạn chiến thắng");
+                   break;
+               } else {
+                   document.write("rất tiếc không đúng");
+                   break;
+               }
+           }
+
+
+       }
+
+</script>
+
+
+
+</body>
+
+</html>
