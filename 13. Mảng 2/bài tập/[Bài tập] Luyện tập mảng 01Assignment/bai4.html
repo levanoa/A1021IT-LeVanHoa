@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <title>BAI TAP MANG</title>
 </head>
-<body>
+<body style="text-align: center;" >
+<form>
+    <h1> NHẬP VÀO MỘT MẢNG </h1>
+    <input type="text" id="value"/>
+    <input type="button"  value="Add" onclick="add();"/>
+    <input type="button"  value="Display" onclick="display();"/>
+    <input type="button"  value="Reverse" onclick="reverse();"/>
+    <p id="result" style="color: red">  </p> <br>
 
+
+</form>
 <script>
-        let soNguyen = [200,5,35,64,2,4,500,2005,10,44];
-        let max = 0;
-        let sum = 0;
-        let average;
-        for ( let i = 0 ; i < soNguyen.length; i ++){
-            if( soNguyen[i] > max) {
-               max = soNguyen[i];
-            }
-            sum = sum + soNguyen[i];
-            average =sum/10;
-        }
-        document.write(" Gía trị lớn nhất là: " + max + "<br>");
-        document.write("Giá trị trung bình là : " + average );
+    let x =0;
+    let array = Array();
+    function add() {
+        array[x] = document.getElementById("value").value;
+        x++;
+        document.getElementById("value ").value = "";
+    }
+    function display() {
+       document.getElementById('result').innerHTML="<hr>"+ "Array = [" + array + "]";
+    }
+    function reverse() {
+        array.reverse();
+        document.getElementById('result').innerHTML="<hr>"+"Array = [" + array + "]";
 
-
-
-
+    }
 
 
 
 </script>
+
 
 
 </body>

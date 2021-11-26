@@ -4,20 +4,42 @@
     <meta charset="UTF-8">
     <title>BAI TAP MANG</title>
 </head>
-<body style="text-align: center;" >
+<body style="text-align: center" >
 <form>
-
+    <h1> NHẬP VÀO MỘT MẢNG </h1>
+    <p>Array: <input type="text" id="value"/> </p>
+    <p> V: <input type="text" id="v"/> </p>
+    <input type="button"  value="Add" onclick="add();"/>
+    <input type="button"  value="Display" onclick="display();"/>
+    <input type="button"  value="Check" onclick="check();"/>
+    <p id="result" style="color: red">  </p>
+    <p id="check" style="color: red">  </p>
 
 </form>
 <script>
-    let soNguyenAm = [200,-5,35,-64,2,-4,-500,2005,10,44];
-    let count = 0 ;
-    for ( let i = 0 ; i < soNguyenAm.length; i++){
-        if( soNguyenAm[i] <0) {
-           count ++;
+    let x =0;
+    let array = Array();
+    function add() {
+        array[x] = document.getElementById("value").value;
+        x++;
+        document.getElementById("value ").value = "";
+    }
+    function display() {
+        document.getElementById('result').innerHTML="<hr>"+ "Array = [" + array + "]";
+    }
+    function check() {
+        let v = document.getElementById('v').value;
+        for ( let i = 0; i <array.length; i ++) {
+            if ( v == array[i]) {
+                document.getElementById('check').innerText = v+ " is in the array";
+                break;
+            } else {
+                document.getElementById('check').innerText = v+  " is not in the array "
+            }
         }
 
-    }document.write(" Có: " + count + " số nguyên âm");
+    }
+
 
 
 

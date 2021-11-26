@@ -7,16 +7,22 @@
 <body>
 
 <script>
-        var soNguyen = [200,5,35,64,2,4,500,100,10,44];
-        var max = 0;
-        for ( let i = 0 ; i<soNguyen.length; i ++){
+        let soNguyen = [200,5,35,64,2,4,500,2005,10,44];
+        let max = 0;
+        let sum = 0;
+        let average;
+        for ( let i = 0 ; i < soNguyen.length; i ++){
             if( soNguyen[i] > max) {
                max = soNguyen[i];
-               var viTri = i;
             }
+            sum = sum + soNguyen[i];
+            average =sum/10;
         }
-        document.write(" Số lớn nhất là: " + max + "<br>");
-        document.write(" Nằm vị trí thứ: " + viTri );
+        document.write(" Gía trị lớn nhất là: " + max + "<br>");
+        document.write("Giá trị trung bình là : " + average );
+
+
+
 
 
 

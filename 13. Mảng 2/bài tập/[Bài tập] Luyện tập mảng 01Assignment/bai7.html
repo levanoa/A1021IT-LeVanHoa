@@ -21,6 +21,7 @@
     let array = Array();
     function add() {
         array[x] = document.getElementById("value").value;
+        alert("bạn vừa nhập có giá trị là: " +array[x])
         x++;
         document.getElementById("value ").value = "";
     }
@@ -28,18 +29,19 @@
         document.getElementById('result').innerHTML="<hr>"+ "Array = [" + array + "]";
     }
     function check() {
-        let check ;
         let v = document.getElementById('v').value;
-        for ( let i = 0; i <array.length; i ++) {
+        for ( let i = 0; i <array.length;i ++) {
             if ( v == array[i]) {
-                document.getElementById('check').innerText = v+ " is in the array";
+                array.splice(i,1);
+                array.push(0);
                 break;
-            } else {
-                document.getElementById('check').innerText = v+  "V is not in the array "
+            } else  {
+                document.getElementById('check').innerText = v+  " is not in the array "
             }
-        }
+        }document.getElementById('result').innerHTML="<hr>"+ "Array = [" + array + "]";
 
     }
+
 
 
 

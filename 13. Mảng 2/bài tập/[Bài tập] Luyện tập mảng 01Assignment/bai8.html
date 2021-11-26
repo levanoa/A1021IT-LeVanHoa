@@ -8,12 +8,11 @@
 <form>
     <h1> NHẬP VÀO MỘT MẢNG </h1>
     <p>Array: <input type="text" id="value"/> </p>
-    <p> V: <input type="text" id="v"/> </p>
     <input type="button"  value="Add" onclick="add();"/>
     <input type="button"  value="Display" onclick="display();"/>
-    <input type="button"  value="Check" onclick="check();"/>
+    <input type="button"  value="Reverse" onclick="reverse();"/>
     <p id="result" style="color: red">  </p>
-    <p id="check" style="color: red">  </p>
+    <p id="reverse" style="color: red">  </p>
 
 </form>
 <script>
@@ -27,17 +26,17 @@
     function display() {
         document.getElementById('result').innerHTML="<hr>"+ "Array = [" + array + "]";
     }
-    function check() {
-        let v = document.getElementById('v').value;
-        for ( let i = 0; i <array.length;i ++) {
-            if ( v == array[i]) {
-                array.splice(i,1);
-                document.getElementById('result').innerHTML="<hr>"+ "Array = [" + array + "]";
-                break;
-            } else  {
-                document.getElementById('check').innerText = v+  " is not in the array "
+    function reverse() {
+        array.sort(function (item1,item2) {
+            if (item1 > item2) {
+                return -1;
+            } else if (item1 < item2) {
+                return 1;
+            } else if (item1 == item2) {
+                return 0;
             }
-        }
+        })
+        document.getElementById('reverse').innerHTML="<hr>"+ "Array = [" + array + "]";
     }
 
 

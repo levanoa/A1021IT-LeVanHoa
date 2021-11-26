@@ -4,33 +4,20 @@
     <meta charset="UTF-8">
     <title>BAI TAP MANG</title>
 </head>
-<body style="text-align: center;" >
-  <form>
-      <h1> TRA CỨU Từ ĐIỂN</h1>
-      <input type="text" id="sr">
-      <button type="button" onclick="search()"> Search </button> <br> <br>
+<body >
 
-      Result : <span id="kq"> </span>
-  </form>
 <script>
-    function search() {
-        var array1 = ['love', 'woman', 'mother', 'follow', 'returns', 'thank', 'question', 'answers', 'input'];
-        var array2 = ['yêu', 'người phụ nữ', ' mẹ', 'theo dõi', 'trở lại', 'cảm ơn', 'câu hỏi', 'đáp án','nhập vào'];
-        var input = document.getElementById('sr').value;
-        var result = "Không tìm thấy";
-        for (let i = 0; i < array1.length; i++) {
-            if (input ==array1[i]) {
-                for (let j = 0; j <array2.length;j++) {
-                    if ( j == i) {
-                        result = array2[j];
-                    }
-                }
-            } else {
-                result;
+        var soNguyen = [1,5,35,64,2,4,66,77,10,44,8,22,88];
+        var count = 0;
+        for ( let i = 0 ; i<soNguyen.length; i ++){
+            if( soNguyen[i] >=10) {
+                count ++;
             }
-        } document.getElementById('kq').innerHTML=result;
+        }
+        document.write(count);
 
-    }
+
+
 
 </script>
 
