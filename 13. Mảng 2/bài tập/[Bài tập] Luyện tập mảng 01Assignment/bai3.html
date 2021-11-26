@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP MANG</title>
+</head>
+<body>
+
+<script>
+        var soNguyen = [200,5,35,64,2,4,500,100,10,44];
+        var max = 0;
+        for ( let i = 0 ; i<soNguyen.length; i ++){
+            if( soNguyen[i] > max) {
+               max = soNguyen[i];
+               var viTri = i;
+            }
+        }
+        document.write(" Số lớn nhất là: " + max + "<br>");
+        document.write(" Nằm vị trí thứ: " + viTri );
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
