@@ -2,19 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>THUC HANH MANG</title>
+    <title>BAI TAP MANG</title>
 </head>
-<body  >
+<body style="text-align: center;" >
+  <form>
+      <h1> TRA CỨU Từ ĐIỂN</h1>
+      <input type="text" id="sr">
+      <button type="button" onclick="search()"> Search </button> <br> <br>
+
+      Result : <span id="kq"> </span>
+  </form>
 <script>
-    let number = [0,1,2,3,20,5,6];
-    let max = 0;
-    let index = 0;
-    for (let i = 0; i<number.length;i++) {
-        if(number[i] >max) {
-            max = number[i];
-            index =i;
-        }
-    } alert("max is :" + max + " ở chỉ số " + index );
+    function search() {
+        var array1 = ['search','love', 'woman', 'mother', 'follow', 'returns', 'thank', 'question', 'answers', 'input'];
+        var array2 = ['tìm kiếm','yêu', 'người phụ nữ', ' mẹ', 'theo dõi', 'trở lại', 'cảm ơn', 'câu hỏi', 'đáp án','nhập vào'];
+        var input = document.getElementById('sr').value;
+        var result = "Không tìm thấy";
+        for (let i = 0; i < array1.length; i++) {
+            if (input==array1[i]) {
+                for (let j = 0; j <array2.length;j++) {
+                    if ( j == i) {
+                        result = array2[j];
+                    }
+                }
+            } else {
+                result;
+            }
+        } document.getElementById('kq').innerHTML=result;
+
+    }
 
 </script>
 
