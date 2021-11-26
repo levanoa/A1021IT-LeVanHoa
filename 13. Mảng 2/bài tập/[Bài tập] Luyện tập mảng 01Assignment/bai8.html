@@ -28,13 +28,7 @@
     }
     function reverse() {
         array.sort(function (item1,item2) {
-            if (item1 > item2) {
-                return -1;
-            } else if (item1 < item2) {
-                return 1;
-            } else if (item1 == item2) {
-                return 0;
-            }
+                return -1 ;
         })
         document.getElementById('reverse').innerHTML="<hr>"+ "Array = [" + array + "]";
     }
