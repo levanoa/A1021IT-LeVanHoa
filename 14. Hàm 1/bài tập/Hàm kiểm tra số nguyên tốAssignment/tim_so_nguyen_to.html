@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP HÀM</title>
+</head>
+<body >
+<form>
+    <h2> NHẬP SỐ NGUYÊN TỐ CẦN KIỂM TRA</h2>
+    <input type="number" id="number" placeholder="nhập số">
+
+    <input type="button" onclick="check1();" value="KIỂM TRA"> <br> <br>
+     <span id="kq" > </span>
+
+</form>
+
+<script>
+    function check1() {
+        function check(number) {
+            if ( number < 2 || number % 2 == 0 ) {
+                document.getElementById("kq").innerText = "KHONG PHAI LA SO NGUYEN TO"
+            } else {
+                document.getElementById("kq").innerText = "LÀ SO NGUYEN TO"
+            }
+        }
+       check(document.getElementById('number').value);
+    }
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

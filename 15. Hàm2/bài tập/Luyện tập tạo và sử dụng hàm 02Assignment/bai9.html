@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HÀM </title>
+</head>
+<body style="text-align: center" >
+
+
+<script>
+    let arr = [1,2,2,4,5,5,5,5,3,'t','t','t'];
+    let result = -1;
+    let count = 0;
+    function checkNumber(a) {
+        for ( let i = 0 ; i < arr.length; i ++) {
+            if ( arr[i] == a) {
+              count ++;
+              result = count;
+            }
+        }  return result;
+    }
+    checkNumber(5);
+    console.log(result);
+
+</script>
+
+
+
+
+</body>
+
+</html>

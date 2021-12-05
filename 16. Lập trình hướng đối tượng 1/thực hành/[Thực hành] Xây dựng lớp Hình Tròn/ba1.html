@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OPP</title>
+</head>
+<body >
+
+
+   <script>
+       class MyDate {
+           constructor(day,month,year) {
+               this.day = day;
+               this.month = month;
+               this.year = year;
+
+           }
+           getDay() {
+               return this.day;
+           }
+           getMonth(){
+               return this.month;
+           }
+           getYear(){
+               return this.year;
+           }
+       }
+       let kq = new MyDate(10,11,1995);
+       let day = kq.getDay();
+       let month = kq.getMonth();
+       let year = kq.getYear();
+       alert(day + "/" + month + "/" +year);
+
+       // function MyDate(day, month, year) {
+       //     this.day = day;
+       //     this.month = month;
+       //     this.year = year;
+       //     this.getDay = function () {
+       //          return this.day;
+       //      }
+       //     this.getMonth = function () {
+       //         return this.month;
+       //     }
+       //     this.getYear = function () {
+       //         return this.year;
+       //     }
+       //     this.setDay = function (day) {
+       //          this.day =day;
+       //     }
+       //     this.setMonth = function (month) {
+       //         this.month =month;
+       //     }
+       //     this.setYear = function (year) {
+       //          this.year = year;
+       //     }
+       // }
+       // let kq = new myDate(10,11,1995);
+       // let day = kq.getDay();
+       // let month = kq.getMonth();
+       // let year = kq.getYear();
+       // alert(day + "/" + month + "/" +year);
+       // kq.setDay(20);
+       // kq.setMonth(11);
+       // kq.setYear(2021);
+       // alert(day + "/" + month + "/" +year);
+
+
+
+
+
+   </script>
+
+
+
+</body>
+
+</html>

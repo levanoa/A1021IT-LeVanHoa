@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VONG LAP LONG NHAU</title>
+</head>
+<body >
+
+
+   <script>
+        // let person = {
+        //     name: [ 'hoa', 'lê'],
+        //     age: 32,
+        //     gender: 'male',
+        //     interests: ['music','movi'],
+        //     bio: function () {
+        //         alert(this.name[1]+ ' ' +this.name[0] + ' is ' + this.age + ' yers old')
+        //
+        //     },
+        //     greeting: function () {
+        //         alert('hi ' + this.name[0] + '.');
+        //     }
+        //
+        // };
+        // person.bio();
+        // person.greeting();
+        // person.age
+       function pheptinh(a,b) {
+           this.num1 = a;
+           this.num2 = b;
+           this.cong = function () {
+               return this.num1 + this.num2;
+           }
+           this.tru = function () {
+               alert("toi là " + this.num1)
+
+           }
+
+       }
+       var kq = new pheptinh(5,7);
+       var kqcong = kq.cong();
+       alert(kqcong);
+       var kqtru = kq.tru();
+       alert(kqtru);
+       kq.tru();
+
+
+
+   </script>
+
+
+
+</body>
+
+</html>

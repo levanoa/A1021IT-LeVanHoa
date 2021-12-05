@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OPP</title>
+</head>
+<body >
+        <p id="kq">kq: </p>
+        <canvas id="Canvas" width="600" height="500"></canvas>
+
+
+<script>
+       class Rectangle  {
+           constructor(dai,rong) {
+               this.dai = dai;
+               this.rong = rong;
+           }
+           getDai () {
+               return this.dai;
+           }
+           getRong () {
+               return this.rong;
+           }
+           dientich() {
+               return this.dai * this.rong;
+           }
+           chuvi() {
+               return (this.dai + this.rong) *2;
+           }
+       }
+       let kq = new Rectangle(350,500);
+       // let dai = kq.getDai();
+       // let rong = kq.getRong();
+       let dientich = kq.dientich();
+       let chuvi = kq.chuvi();
+       document.getElementById('kq').innerHTML= "Hình có diện tích là: " + dientich + " <br>" + " Chu vi là: " + chuvi;
+
+       var canvas = document.getElementById("Canvas");
+       if (canvas.getContext)
+       {
+           var ctx = canvas.getContext('2d');
+           ctx.fillStyle='#fa4b2a';    // color of fill
+           ctx.fillRect(10, 40, kq.getRong(), kq.getDai()); // create rectangle
+       }
+
+
+
+
+
+
+   </script>
+
+
+
+</body>
+
+</html>
