@@ -5,42 +5,66 @@
     <title>OPP</title>
 </head>
 <style>
-    div {
-        background: black;
-        color: white;
-        text-align: center;
-        
-        width: 900px;
-        height: 500px;
-        border: #4CAF50;
-    }
 </style>
 <body >
-  <div>
-      ĐỘ C SANG F: <span id="kq"> </span> <br>
-      ĐỘ C SANG K: <span id="kq1"> </span>
-
-  </div>
-
 
 <script>
-       class Temperature  {
-           constructor(c) {
-               this.doC = c;
-           }
-           ChangeCtoF () {
-               return 1.8 * this.doC +32;
-           }
-           ChangeCtoK () {
-               return this.doC +273.15;
-           }
 
-       }
-       let kq = new Temperature(25);
-       let CtoF = kq.ChangeCtoF();
-       let CtoK = kq.ChangeCtoK();
-       document.getElementById('kq').innerHTML= CtoF;
-       document.getElementById('kq1').innerHTML= CtoK;
+      class Apple {
+          constructor(wa) {
+              this.weight =wa;
+          }
+          GetW_Apple(){
+              return this.weight;
+          }
+      }
+      class Human extends Apple {
+          constructor(wa, name, gender, weight) {
+              super(wa);
+              this.name = name;
+              this.gender = gender;
+              this.weight =weight;
+          }
+          human1(){
+              document.write("Name: "+ this.name +" <br>");
+              document.write("Gender: "+ this.gender +" <br>" );
+              document.write("Weight: "+ this.weight );
+
+          }
+          say() {
+              console.log('i love everything');
+              console.log('i am Adam and Eva');
+          }
+          eat() {
+               this.GetW_Apple - 1 ;
+               this.weight + 1 ;
+          }
+          checkApple() {
+              return this.GetW_Apple();
+          }
+          setGender(gender){
+              return this.gender;
+          }
+          setName(){
+              return this.name;
+          }
+          setName(name){
+              this.name = name;
+          }
+          getWight(){
+              document.write(newWeight);
+          }
+          setWight(wight){
+              this.weight =wight;
+          }
+
+      }
+      let kq2 = new Human('Eva','Woman',50);
+      kq2.human1();
+      kq2.eat();
+      let weightApple =kq.GetW_Apple();
+      console.log(weightApple);
+
 
    </script>
 
