@@ -2,47 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>VONG LAP LONG NHAU</title>
+    <title>OPP</title>
 </head>
 <body >
 
 
    <script>
-        // let person = {
-        //     name: [ 'hoa', 'lê'],
-        //     age: 32,
-        //     gender: 'male',
-        //     interests: ['music','movi'],
-        //     bio: function () {
-        //         alert(this.name[1]+ ' ' +this.name[0] + ' is ' + this.age + ' yers old')
-        //
-        //     },
-        //     greeting: function () {
-        //         alert('hi ' + this.name[0] + '.');
-        //     }
-        //
-        // };
-        // person.bio();
-        // person.greeting();
-        // person.age
-       function pheptinh(a,b) {
-           this.num1 = a;
-           this.num2 = b;
-           this.cong = function () {
-               return this.num1 + this.num2;
-           }
-           this.tru = function () {
-               alert("toi là " + this.num1)
+       class MyDate {
+           constructor(day,month,year) {
+               this.day = day;
+               this.month = month;
+               this.year = year;
 
            }
-
+           getDay() {
+               return this.day;
+           }
+           getMonth(){
+               return this.month;
+           }
+           getYear(){
+               return this.year;
+           }
+           setDay(day) {
+               this.day= day;
+           }
+           setMonth(month) {
+               this.month= month;
+           }
+           setYear(year) {
+               this.year =year;
+           }
        }
-       var kq = new pheptinh(5,7);
-       var kqcong = kq.cong();
-       alert(kqcong);
-       var kqtru = kq.tru();
-       alert(kqtru);
-       kq.tru();
+       let kq = new MyDate(10,11,1995);
+       let day = kq.getDay();
+       let month = kq.getMonth();
+       let year = kq.getYear();
+       alert(day + "/" + month + "/" +year);
+       let set1 = kq.setDay(12);
+       let set2 = kq.setMonth(11);
+       let set3 = kq.setYear(2019);
+       alert(set1 + "/" + set2 + "/" +set3);
+
+       // function MyDate(day, month, year) {
+       //     this.day = day;
+       //     this.month = month;
+       //     this.year = year;
+       //     this.getDay = function () {
+       //          return this.day;
+       //      }
+       //     this.getMonth = function () {
+       //         return this.month;
+       //     }
+       //     this.getYear = function () {
+       //         return this.year;
+       //     }
+       //     this.setDay = function (day) {
+       //          this.day =day;
+       //     }
+       //     this.setMonth = function (month) {
+       //         this.month =month;
+       //     }
+       //     this.setYear = function (year) {
+       //          this.year = year;
+       //     }
+       // }
+       // let kq = new MyDate(10,11,1995);
+       // let day = kq.getDay();
+       // let month = kq.getMonth();
+       // let year = kq.getYear();
+       // alert(day + "/" + month + "/" +year);
+       // kq.setDay(20);
+       // kq.setMonth(11);
+       // kq.setYear(2021);
+       // alert(day + "/" + month + "/" +year);
+
+
 
 
 

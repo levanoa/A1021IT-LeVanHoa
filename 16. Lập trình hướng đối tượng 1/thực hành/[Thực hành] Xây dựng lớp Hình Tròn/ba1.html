@@ -8,61 +8,25 @@
 
 
    <script>
-       class MyDate {
-           constructor(day,month,year) {
-               this.day = day;
-               this.month = month;
-               this.year = year;
-
+       class Circle  {
+           constructor(radius,color) {
+               this.radius = radius;
+               this.color = color;
            }
-           getDay() {
-               return this.day;
+           getRadius() {
+               return this.radius;
            }
-           getMonth(){
-               return this.month;
-           }
-           getYear(){
-               return this.year;
+           getArea() {
+               let s = Math.PI * this.radius * this.radius;
+               return s;
            }
        }
-       let kq = new MyDate(10,11,1995);
-       let day = kq.getDay();
-       let month = kq.getMonth();
-       let year = kq.getYear();
-       alert(day + "/" + month + "/" +year);
+       let kq = new Circle(2,'đen');
+       let radius = kq.getRadius();
+       let area = kq.getArea();
 
-       // function MyDate(day, month, year) {
-       //     this.day = day;
-       //     this.month = month;
-       //     this.year = year;
-       //     this.getDay = function () {
-       //          return this.day;
-       //      }
-       //     this.getMonth = function () {
-       //         return this.month;
-       //     }
-       //     this.getYear = function () {
-       //         return this.year;
-       //     }
-       //     this.setDay = function (day) {
-       //          this.day =day;
-       //     }
-       //     this.setMonth = function (month) {
-       //         this.month =month;
-       //     }
-       //     this.setYear = function (year) {
-       //          this.year = year;
-       //     }
-       // }
-       // let kq = new myDate(10,11,1995);
-       // let day = kq.getDay();
-       // let month = kq.getMonth();
-       // let year = kq.getYear();
-       // alert(day + "/" + month + "/" +year);
-       // kq.setDay(20);
-       // kq.setMonth(11);
-       // kq.setYear(2021);
-       // alert(day + "/" + month + "/" +year);
+       alert("Hình tròn có bán kính là " + radius + " và có diện tích là: " + area);
+
 
 
 

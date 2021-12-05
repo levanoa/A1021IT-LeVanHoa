@@ -5,27 +5,43 @@
     <title>OPP</title>
 </head>
 <body >
+        <p id="kq">kq: </p>
+        <canvas id="Canvas" width="600" height="500"></canvas>
 
 
-   <script>
-       class Circle  {
-           constructor(radius,color) {
-               this.radius = radius;
-               this.color = color;
+<script>
+       class Rectangle  {
+           constructor(dai,rong) {
+               this.dai = dai;
+               this.rong = rong;
            }
-           getRadius() {
-               return this.radius;
+           getDai () {
+               return this.dai;
            }
-           getArea() {
-               let s = Math.PI * this.radius * this.radius;
-               return s;
+           getRong () {
+               return this.rong;
+           }
+           dientich() {
+               return this.dai * this.rong;
+           }
+           chuvi() {
+               return (this.dai + this.rong) *2;
            }
        }
-       let kq = new Circle(2,'đen');
-       let radius = kq.getRadius();
-       let area = kq.getArea();
+       let kq = new Rectangle(350,500);
+       // let dai = kq.getDai();
+       // let rong = kq.getRong();
+       let dientich = kq.dientich();
+       let chuvi = kq.chuvi();
+       document.getElementById('kq').innerHTML= "Hình có diện tích là: " + dientich + " <br>" + " Chu vi là: " + chuvi;
 
-       alert("Hình tròn có bán kính là " + radius + " và có diện tích là: " + area);
+       var canvas = document.getElementById("Canvas");
+       if (canvas.getContext)
+       {
+           var ctx = canvas.getContext('2d');
+           ctx.fillStyle='#fa4b2a';    // color of fill
+           ctx.fillRect(10, 40, kq.getRong(), kq.getDai()); // create rectangle
+       }
 
 
 
