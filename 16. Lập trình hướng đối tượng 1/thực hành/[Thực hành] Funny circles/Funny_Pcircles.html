@@ -7,71 +7,47 @@
 <style>
 </style>
 <body >
+      <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
 
 <script>
 
-      class Battery {
-          constructor(dercerse, status,lamp) {
-              this.decrease;
-          }
-          getDecrease(){
-              return this.decrease;
-          }
-          setDecrease(decrease){
-              this.decrease = decrease;
-          }
-      }
-      class Human {
-          constructor(name, gender, weight) {
-              this.name = name;
-              this.gender = gender;
-              this.weight =weight;
-          }
-          setGender(gender) {
-              this.gender =gender;
-          }
-          getName(){
-              return this.name;
-          }
-          setName(name){
-              this.name = name;
-          }
-          getWeight(){
-              return this.weight;
-          }
-          setWeight(weight){
-              this.weight = weight;
-          }
+    function Circle(x, y, radius){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
 
-          eat (Apple) {
-              if( Apple.decrease > 0 ) {
-                  Apple.decrease--;
-                  this.weight++;
-                  document.write("Bạn đã ăn táo"+"<br>");
+    function getRandomHex(){
+        return Math.floor(Math.random()*255);
+    }
 
-              } else {
-                  document.write("Táo đã hết vui lòng ăn sau "+ " <br>");
-              }
-          }
-          say (){
-              document.write("Xin chào "+ "<br>");
-          }
-          checkApple(Apple){
-              document.write("khối lượng của táo còn lại là: " + Apple.decrease );
-          }
-      }
-      let apple = new Apple(0);
-      let human = new Human('Eva','Woman',50);
-      let human2 = new Human('Adam','man',70)
+    function getRandomColor(){
+        var black = getRandomHex();
+        var green = getRandomHex();
+        var yellow = getRandomHex();
+        return "rgb(" + black + "," + yellow + "," + green +")";
+    }
 
-      human.say();
-      document.write(" Số kg táo đang có: " + apple.getDecrease() + "<br>");
-      apple.setDecrease(10)
-      document.write("Số kg hiện tại của bạn là: "+ human.getWeight() + "<br>")
-      human.eat(apple);
-      document.write("Số kg hiện tại của bạn là: "+ human.getWeight() + "<br>");
-      human.checkApple(apple);
+    function createCircle(){
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var radius = Math.floor(Math.random() * 80);
+        var color = getRandomColor();
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerHeight;
+        var circle= new Circle(x, y, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
 
+    function createMultipleCircle(){
+        for(var i = 0; i < 30; i++){
+            createCircle();
+        }
+    }
+
+    createMultipleCircle();
 
 
 
@@ -83,102 +59,3 @@
 </body>
 
 </html>
-
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>CAU TRUYEN ADAM</title>-->
-<!--</head>-->
-<!--<body>-->
-
-<!--<script>-->
-<!--    var  Apple = function (weight) {-->
-
-<!--        this.weight = weight;-->
-
-<!--        this.setweight  = function (wegith_) {-->
-<!--            this.weight = wegith_;-->
-<!--        };-->
-
-<!--        this.getweight = function () {-->
-<!--            return this.weight;-->
-
-<!--        };-->
-
-<!--        this.decrease = function () {-->
-<!--            this.weight = this.weight - 1;-->
-<!--        };-->
-
-<!--    };-->
-
-<!--    var Human = function (name, gender, weighthuman , weightapple, checkweightapple, getweightapple) {-->
-<!--        this.name = name;-->
-<!--        this.getweightapple = getweightapple;-->
-<!--        this.weightHuman =  10;-->
-<!--        this.weightapple = null;-->
-
-<!--        this.getweightapple= function (weightapple_) {-->
-<!--            this.weightapple =  weightapple_-->
-
-<!--        };-->
-
-<!--//chuc nang noi-->
-
-<!--        this.Said = function () {-->
-<!--            document.write(" Adam và Eva là những con người đầu tiên, trong vườn địa đàng có một cây táo ra những quả táo chín mọng. Adam và Eva lấy một quả táo và ăn, mỗi người ăn một miếng táo cho đến khi hết!");-->
-<!--        };-->
-
-<!--//biet an tao-->
-
-<!--        this.eat = function () {-->
-<!--            if (this.weightapple.getweight() >0){-->
-<!--                this.weightapple.decrease();-->
-<!--                this.weightHuman = this.weightHuman += 1;-->
-
-<!--                document.write(" Sau khi an mot mieng tao la  can nang cua ban la   : " + this.weightHuman  +  " So tao con lai la : " + this.weightapple.getweight());-->
-<!--            } else {-->
-<!--                document.write(" Oi khong! ban chua an mieng tao nao ! An tao di de hien can nag  nhe . ");-->
-<!--            }-->
-<!--        };-->
-
-<!--    };-->
-
-
-
-<!--    // nhap ten-->
-
-
-<!--    var  apple =  new Apple(100);-->
-<!--    var  human = new Human(2, 2, 2, 2);-->
-
-<!--    human.getweightapple(apple);-->
-
-<!--    function main() {-->
-<!--        human.Said();-->
-<!--    };-->
-
-<!--    function eat() {-->
-
-<!--        human.eat(apple);-->
-<!--    };-->
-<!--</script>-->
-
-<!--<button type="button" onclick="main()" style="background-color: #4CAF50;-->
-<!--    color: white;-->
-<!--    padding: 12px 20px;-->
-<!--    border: none;-->
-<!--    border-radius: 4px;">-->
-<!--    CAU TRUYEN ADAM-->
-<!--</button>-->
-
-<!--<button type="button" onclick="eat()" style="background-color: #4CAF50;-->
-<!--    color: white;-->
-<!--    padding: 12px 20px;-->
-<!--    border: none;-->
-<!--    border-radius: 4px;">-->
-<!--    EAT APPLE-->
-<!--</button>-->
-
-<!--</body>-->
-<!--</html>-->

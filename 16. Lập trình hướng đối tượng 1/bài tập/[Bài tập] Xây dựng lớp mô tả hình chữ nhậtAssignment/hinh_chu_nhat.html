@@ -27,6 +27,7 @@
            chuvi() {
                return (this.dai + this.rong) *2;
            }
+
        }
        let kq = new Rectangle(350,500);
        // let dai = kq.getDai();
@@ -39,8 +40,8 @@
        if (canvas.getContext)
        {
            var ctx = canvas.getContext('2d');
-           ctx.fillStyle='#fa4b2a';    // color of fill
-           ctx.fillRect(10, 40, kq.getRong(), kq.getDai()); // create rectangle
+           ctx.fillStyle='#fa4b2a';
+           ctx.fillRect(10, 40, kq.getRong(), kq.getDai());
        }
 
 
