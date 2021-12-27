@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function dem(s) {
+        let arr = [];
+        for(let i = 0; i< s.length; i ++) {
+            if(arr.indexOf(s.charAt(i))  == -1)  {
+                arr.push(s.charAt(i));
+
+           }
+        }
+        return arr;
+
+    }
+    let s = prompt("nhập chuỗi ký tự");
+    alert(dem(s));
+
+
+
+
+
+
+</script>
+</body>
+</html>

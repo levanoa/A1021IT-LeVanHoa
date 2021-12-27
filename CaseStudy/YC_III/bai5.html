@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form name="" method="" action=""-->
+<!--       <h1> MENU ĐỒ UỐNG </h1>-->
+<!--        <ol type="1">-->
+<!--            <li>Cafe</li>-->
+<!--            <li>Cam vắt</li>-->
+<!--            <li> Nước ép cà rốt</li>-->
+<!--            <li> Nước ép cà chua</li>-->
+<!--            <li> Nước lọc</li>-->
+<!--            <li> Nước dừa</li>-->
+<!--            <li> Thoát lựa chọn</li>-->
+<!--        </ol>-->
+<!--       <p> Nhập số thứ tự : <input type="text" id="num"/> </p>-->
+<!--       <p> Nhập số lượng  :  <input type='text' id="sl"/> </p>-->
+<!--       <button type="button" onclick="choose()">CHOOSE</button> <br> <br>-->
+<!--       <p id="dachon"></p>-->
+<!--       <p> <span id="kq"> </span> </p>-->
+<!--       <p> <span id="kq1" </span> </p>-->
+<!--       <p> <span id="kq3" </span> </p>-->
+
+
+<script>
+
+//    function choose() {
+//            var gia = 0;
+//            let num = parseInt(document.getElementById('num').value ) ;
+//            let sl = parseInt(document.getElementById('sl').value ) ;
+//            // do {
+//
+//                switch (num) {
+//                    case 1:
+//                        // document.getElementById('dachon').innerHTML = 'Bạn đã chọn: cà phê';
+//                        gia = 20000;
+//                        break;
+//                    case 2:
+//                        // document.getElementById('dachon').innerText = 'Bạn đã chọn: CAM VẮT';
+//                        gia = 25000;
+//                        break;
+//                    case 3:
+//                        // document.getElementById('dachon').innerText = 'Bạn đã chọn: Nước ép cà rốt';
+//                        gia = 24000;
+//                        break;
+//                    case 4:
+//                        // document.getElementById('dachon').innerText = 'Bạn đã chọn: Nước ép cà chua\n';
+//                        gia = 14000;
+//                        break;
+//                    case 5:
+//                        // document.getElementById('dachon').innerText = 'Bạn đã chọn:Nước lọc';
+//                        gia = 156000;
+//                        break;
+//                    case 6:
+//                        // document.getElementById('dachon').innerText = 'Bạn đã chọn: Nước dừa';
+//                        gia = 145000;
+//                        break;
+//                    case 7 :
+//                           alert("mời bạn nhập lại");
+//
+//                }
+//
+//
+//            // } while (num != 7)
+//            tongtien = sl*gia;
+//            document.getElementById('kq').innerHTML= " Đơn giá: " +  gia + " đ";
+//            document.getElementById('kq1').innerHTML= "Tổng tiền: " + tongtien + " đ";
+//           // document.getElementById('kq3').innerHTML= "Tổng tiền: " + tong + " đ";
+//
+//        }
+    let menu = " mời bạn chọn đồ uống \n" +
+            "1. ca phe \n" +
+            "2. nuoc ep \n" +
+            "3. nuoc oi \n" +
+            "4. thoát khoải quá trình chọn";
+     let tong=0;
+     let chonso ;
+
+     do {
+        chonso = parseInt(prompt(menu));
+        let gia = 0;
+        let sl = 0;
+        switch (chonso) {
+        case 1:
+            // document.getElementById('dachon').innerHTML = 'Bạn đã chọn: cà phê';
+            gia = 10000;
+            break;
+        case 2:
+            // document.getElementById('dachon').innerText = 'Bạn đã chọn: CAM VẮT';
+            gia = 20000;
+            break;
+        case 3:
+            // document.getElementById('dachon').innerText = 'Bạn đã chọn: Nước ép cà rốt';
+            gia = 30000;
+            break;
+            case 4:
+                continue;
+
+            }
+             sl = parseInt(prompt('nhập số lượng cần oder')) ;
+            tong +=  gia * sl;
+          } while (chonso !== 4)
+          alert(tong) ;
+
+// document.getElementById('kq3').innerHTML= "Tổng tiền: " + tong + " đ";
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

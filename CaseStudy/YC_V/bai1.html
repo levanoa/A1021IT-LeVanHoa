@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = prompt("mang a");
+    let n = prompt('mang b');
+   let arr = []
+    let total = 0;
+    for(let i = 0 ; i< m; i ++) {
+        let row = [];
+        for( let j = 0; j<n; j++) {
+           row[j]= parseInt( prompt('nhap so'));
+        }
+        arr[i] = row;
+    }
+    for( let i = 0; i< arr.length; i ++) {
+        for(let j = 0; j <arr[i].length; j ++) {
+            if(arr[i][j] % 2 == 0) {
+                total +=arr[i][j];
+            }
+        }
+    }
+    console.table(arr);
+   alert(total);
+
+
+</script>
+</body>
+</html>

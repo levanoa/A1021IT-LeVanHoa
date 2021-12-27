@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function dem(s,s1) {
+        let arr1 = s.split('');
+        let arr2 = s1.split('');
+       count = 0;
+        for(let i = 0; i< arr1.length; i ++) {
+            for( let j = 0 ; j < arr2.length; j ++){
+                if(arr1[i] === arr2[j] ) {
+                    count ++;
+                    arr1.splice(i,1);
+                    arr2.splice(j,1);
+                    i--;
+
+                    break;
+
+                }
+            }
+        }
+        return count;
+
+    }
+    let s = prompt("nhập chuỗi ký tự");
+    let s1 = prompt("nhập");
+    alert(dem(s,s1));
+
+
+
+
+
+
+</script>
+</body>
+</html>
