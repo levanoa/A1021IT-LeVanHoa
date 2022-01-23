@@ -1,0 +1,27 @@
+package _3_array.Bai_tap;
+
+import java.util.Scanner;
+
+public class Delete_arr {
+
+        public static void main(String[] args) {
+                int [] arr = {1,2,3,5};
+                int c,i;
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Nhập số cần xóa ");
+                int x = scanner.nextInt();
+                for(c = i = 0 ; i < arr.length; i ++) {
+                        if(arr[i] != x) {
+                               arr[c] = arr[i];
+                             c++;
+                        }
+                }
+
+
+                System.out.println("Mảng sau khi xóa phần tử " + x + " là: ");
+                for(int j= 0 ; j < c; j++) {
+                        System.out.print(arr[j] + "\t");
+                }
+        }
+
+}
