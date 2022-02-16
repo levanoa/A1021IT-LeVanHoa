@@ -6,8 +6,9 @@ import ss8_clean_code.mvc.model.repository.StudentRepository;
 
 import java.util.Scanner;
 
-public class StudentService implements IStudentService {
+public class StudentService implements ss8_clean_code.mvc.model.service.IStudentService {
     private IStudentRepository iStudentRepository = new StudentRepository();
+
     @Override
     public void add() {
         Student[] students = iStudentRepository.addStudent();

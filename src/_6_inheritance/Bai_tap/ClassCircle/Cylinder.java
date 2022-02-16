@@ -1,4 +1,4 @@
-package _6_inheritance.Thuc_hanh.ClassCircle;
+import _6_inheritance.Bai_tap.ClassCircle.Circle;
 
 public class Cylinder extends Circle {
     public float hight =5f;
@@ -16,9 +16,8 @@ public class Cylinder extends Circle {
         return hight;
     }
 
-       public void tinhTheTich() {
-        tinhDienTich();
-        theTich = dienTich * hight;
+       public float tinhTheTich() {
+        return theTich = dienTich * hight;
        }
        public float getTheTich() {
         return theTich;

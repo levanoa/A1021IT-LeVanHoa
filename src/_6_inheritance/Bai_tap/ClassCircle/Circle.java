@@ -1,5 +1,4 @@
-package _6_inheritance.Thuc_hanh.ClassCircle;
-
+package _6_inheritance.Bai_tap.ClassCircle;
 
 public class Circle {
     public float banKinh;
@@ -12,8 +11,8 @@ public class Circle {
         this.color = color;
     }
 
-    public void tinhDienTich() {
-        dienTich = PI * banKinh * banKinh;
+    public float tinhDienTich() {
+       return  dienTich = PI * banKinh * banKinh;
     }
 
 
