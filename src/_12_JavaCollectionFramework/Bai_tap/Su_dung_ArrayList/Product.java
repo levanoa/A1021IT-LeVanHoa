@@ -25,7 +25,7 @@ public class Product implements Comparable<Product> {
         this.tenSanPham = tenSanPham;
     }
 
-    public boolean getIdSanPham() {
+    public int getIdSanPham() {
         return idSanPham;
     }
 
@@ -60,12 +60,11 @@ public class Product implements Comparable<Product> {
         if (this == o) return true;
         if (!(o instanceof Product)) return false;
         Product product = (Product) o;
-        return getIdSanPham().equals(product.getIdSanPham());
+        return Objects.equals(getIdSanPham(), product.getIdSanPham());
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(getIdSanPham());
     }
-
 }

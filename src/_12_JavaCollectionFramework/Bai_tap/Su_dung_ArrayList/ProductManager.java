@@ -50,19 +50,28 @@ public class ProductManager {
         }
     }
     public void sapXepSanPham() {
-        Collections.sort(this.danhSachSanPham, new Comparator<Product>() {
+        Collections.sort(danhSachSanPham);
+        Collections.sort(danhSachSanPham, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
-                if(o1.getIdSanPham() < o2.getIdSanPham()) {
-                    return  1;
-                } else if (o1.getIdSanPham() > o2.getIdSanPham()) {
-                    return -1;
-                } else {
-                    return 0;
-                }
-
+                return o1.getIdSanPham() - o2.getIdSanPham();
             }
         });
+
+//        Collections.sort(danhSachSanPham, (o1,o2)-> o1.getIdSanPham() - o2.getIdSanPham());
+//        Collections.sort(this.danhSachSanPham, new Comparator<Product>() {
+//            @Override
+//            public int compare(Product o1, Product o2) {
+//                if(o1.getIdSanPham() < o2.getIdSanPham()) {
+//                    return  1;
+//                } else if (o1.getIdSanPham() > o2.getIdSanPham()) {
+//                    return -1;
+//                } else {
+//                    return 0;
+//                }
+//
+//            }
+//        });
     }
 
 
