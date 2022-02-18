@@ -7,8 +7,8 @@ public class Product implements Comparable<Product> {
     private String tenSanPham;
     private String thongTinSanPham;
 
-    public Product(String tenSanPham) {
-        this.tenSanPham = tenSanPham;
+    public Product(Integer idSanPham) {
+        this.idSanPham = idSanPham;
     }
 
     public Product(Integer idSanPham, String tenSanPham, String thongTinSanPham) {
@@ -25,7 +25,7 @@ public class Product implements Comparable<Product> {
         this.tenSanPham = tenSanPham;
     }
 
-    public Integer getIdSanPham() {
+    public boolean getIdSanPham() {
         return idSanPham;
     }
 
@@ -67,4 +67,5 @@ public class Product implements Comparable<Product> {
     public int hashCode() {
         return Objects.hash(getIdSanPham());
     }
+
 }

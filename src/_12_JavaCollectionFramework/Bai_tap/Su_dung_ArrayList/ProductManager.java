@@ -17,6 +17,23 @@ public class ProductManager {
     public void themSanPham(Product sp) {
         this.danhSachSanPham.add(sp);
     }
+//    public void suaSanPham(Integer id) {
+//        boolean isExisted = false;
+//        int size = danhSachSanPham.size();
+//        for (int i = 0; i < size; i++)
+//            if (danhSachSanPham.get(i).getIdSanPham()) {
+//                isExisted = true;
+//                danhSachSanPham.get(i).setIdSanPham();
+//                danhSachSanPham.get(i).setTenSanPham();
+//                danhSachSanPham.get(i).setThongTinSanPham();
+//                break;
+//            }
+//        if (!isExisted) {
+//            System.out.printf("id = %d not existed.\n", id);
+//        } else {
+//            return hienThiSanPham();
+//        }
+//    }
     public boolean xoaSanPham(Product sp) {
         return this.danhSachSanPham.remove(sp);
     }

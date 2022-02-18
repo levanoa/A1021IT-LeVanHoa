@@ -11,6 +11,12 @@ public class Test {
         do {
             System.out.println("-----Menu-----");
             System.out.println(" Lựa chọn chức năng: ");
+            System.out.println(
+                    "1.	Thêm sản phẩm vào danh sách.\n"
+                            + "2.	Xóa sản phẩm đang có.\n"
+                            + "3.	In danh sách sản phẩm ra màn hình \n"
+                            + "4.	Tìm sản phẩm.\n"
+                            + "5.	Sắp xếp sản phẩm.");
             chon = scanner.nextInt();
             scanner.nextLine();
             if(chon == 1) {
@@ -23,9 +29,9 @@ public class Test {
                 dssp.themSanPham(sp);
 
             }else if(chon == 2) {
-                System.out.println("nhập tên sản phầm cần xóa");
-                String tenSanPham = scanner.nextLine();
-                Product sp = new Product(tenSanPham);
+                System.out.println("nhập id sản phầm cần xóa");
+                Integer idSanPham = scanner.nextInt();
+                Product sp = new Product(idSanPham);
                 System.out.println("xóa sản phẩm : " + dssp.xoaSanPham(sp));
             } else if(chon == 3) {
                 dssp.hienThiSanPham();
