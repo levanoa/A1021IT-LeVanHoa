@@ -33,7 +33,8 @@ public class test {
                 SinhVien sv = new SinhVien(maSinhVien);
                 System.out.println(dssv.kiemTraTonTai(sv));
             } else if(chon ==7) {
-                System.out.println("nhập mã sinh viên");String maSinhVien = scanner.nextLine();
+                System.out.println("nhập mã sinh viên");
+                String maSinhVien = scanner.nextLine();
                 SinhVien sv1 = new SinhVien(maSinhVien);
                 System.out.println(dssv.xoaSinhVien(sv1));
 
