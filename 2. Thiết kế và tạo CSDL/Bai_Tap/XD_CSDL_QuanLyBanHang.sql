@@ -18,6 +18,7 @@ create table QuanlyBanHang1.OderDetailI(
     oID int not null,
     pID int not null,
     odQTY  varchar(40),
+    primary key(oID, pID),
     foreign key (oID) references quanlybanhang1.order1(OId),
     foreign key (pID) references quanlybanhang1.Product(pID)
 );
