@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1> THIS IS HEADING 1</h1>
+    <p> this is an ordinary paragraph. Notice that this text is blue. The <br> default text color for a page is defined in the body selector.  </p>
+    <p>Đoạn văn <span class="inline">đầu tiên</span> trong trang</p>
+    <p>Đoạn văn <span class="block">thứ 2</span> trong trang</p>
+    <p>Đoạn văn <span class="inline-block">thứ 3</span> trong trang</p>
+
+    <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#clients">Our Clients</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+
+</body>
+
+
+<style>
+    body {
+        background-color: white;
+    }
+    h1 {
+        color: green;
+        margin-left: 20px;
+
+    }
+    p {
+        color: blue;
+    }
+
+    span {
+        border: 2px doted red;
+    }
+    .inline {
+        display: inline;
+        border: 1px solid black;
+    }
+    .block {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+    .inline-block {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+    .nav {
+        background-color: yellow;
+        list-style-type: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .nav li:hover {
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px;
+        border: black solid ;
+        background-color: white;
+
+    }
+    a {
+
+    }
+
+
+
+</style>
+</html>
